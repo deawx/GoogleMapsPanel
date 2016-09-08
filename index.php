@@ -5,10 +5,10 @@ require_once('lib/medoo.php');
 
 $db = new medoo(array(
 	'database_type' => 'mysql',	
-    'database_name' => 'maps',
-    'server' => 'localhost',
-    'username' => 'root',
-    'password' => '74123698',
+    'database_name' => 'db98354f782b7743daab35a67b00b63513',
+    'server' => '98354f78-2b77-43da-ab35-a67b00b63513.mysql.sequelizer.com',
+    'username' => 'qoeamfkogizukyqs',
+    'password' => 'yHpT5ZGTv8g34aUqrjksDTz8Tx7xan7xg6fNf3fUayNDeENpHNFoUumMhp8E2jTh',
 	'charset' => 'utf8'
 ));
 
