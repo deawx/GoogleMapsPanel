@@ -20,8 +20,8 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 <title>Admin</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="http://bootswatch.com/simplex/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="views/admin-map.css"/>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
+<link rel="stylesheet" type="text/css" href="views/admin-map.css"/>
 </head>
 
 <body>
@@ -148,7 +148,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 <script type="text/javascript" src="views/il_ilce.js"></script> 
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script> 
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-tr-TR.min.js"></script> 
-<script src="http://malsup.github.com/min/jquery.form.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script> 
 <script src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script> 
 <script>
 	//sabitler.

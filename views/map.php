@@ -73,7 +73,6 @@
 <div id="aydem">&nbsp;</div>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="http://underscorejs.org/underscore-min.js"></script>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
