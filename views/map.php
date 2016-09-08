@@ -29,11 +29,11 @@
         <td><span class="lbl-il-ilce">İl</span></td>
         <td width="50%"><select id="il" name="il" class="select max-width-135">
             <option value="-1">Seçiniz</option>
-            <option value="35">İZMİR</option>
-            <option value="45">MANİSA</option>
-            <option value="9">AYDIN</option>
-            <option value="20">DENİZLİ</option>
-            <option value="48">MUĞLA</option>
+            <option data-lat="38.41885000" data-lng="27.12872000" value="35">İZMİR</option>
+            <option data-lat="38.61909900" data-lng="27.42892100" value="45">MANİSA</option>
+            <option data-lat="37.84440000" data-lng="27.84580000" value="9">AYDIN</option>
+            <option data-lat="37.77652000" data-lng="29.08639000" value="20">DENİZLİ</option>
+            <option data-lat="37.21527780" data-lng="28.36361110" value="48">MUĞLA</option>
           </select></td>
         <td><span class="lbl-il-ilce">İlçe</span></td>
         <td width="50%"><select id="ilce" name="ilce" class="select max-width-135" disabled>
@@ -80,8 +80,6 @@
       xfbml      : true,
       version    : 'v2.7'
     });
-
-    // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
   (function(d, s, id){
@@ -187,6 +185,16 @@ function placesServiceCallback(results) {
 	}
 }
 $(function(){
+	$('#il').on('change', function() {
+		var _lat = $(this).data('lat');
+		var _lng = $(this).data('lng');
+		if(this.value > 0){
+			map.setCenter({
+				lat: parseFloat(_lat),
+				lng: parseFloat(_lng)
+			});	
+		}
+	});
 	$('#ilce').on('change', function() {
 		if(this.value > 0){
 			$.post('admin/lokasyon/liste/'+this.value, {}, function(response) {
