@@ -115,6 +115,13 @@ Flight::route('/admin/lokasyon/liste(/@ilce_id:[0-9]+)', function($ilce_id){
 	global $db;
 	
 	if($ilce_id > 0){
+		/*
+		$lokasyon = $db->select("lokasyon", 
+			array("[><]sehir s" => array("sehir" => "il_id"), "[><]ilce i" => array("ilce" => "ilce_id")), 
+			array("lokasyon.*", "sehir.il_adi", "ilce.ilce_adi"),
+			array("lokasyon.ilce"=> $ilce_id)
+		);			
+		*/
 		$lokasyon = $db->query("SELECT lokasyon.*,sehir.il_adi,ilce.ilce_adi 
 								FROM lokasyon 
 								INNER JOIN sehir ON lokasyon.sehir = sehir.il_id 

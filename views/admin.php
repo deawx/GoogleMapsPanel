@@ -17,7 +17,9 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
 <head>
 <base href="https://googlemapspanel.herokuapp.com/">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e31d1a">
+<title>Yönetim - Size En Yakın MİM</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="http://bootswatch.com/simplex/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
