@@ -1,0 +1,145 @@
+html {
+	padding: 7px;
+}
+
+.max-width-135 {
+ max-width: 135px;
+}
+
+#bulunan-adresler li:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) {
+
+
+#en-yakin {
+	position: relative;
+	background-image: url('img/en-yakin-mim.png');
+	background-size: 100% 100%;
+	height: 63px;
+	z-index: 2;
+}
+
+
+#sizin-icin {
+	position: relative;
+	background-image: url('img/destek.png');
+	background-size: 100% 100%;
+	height: 120px;
+	margin-top: -20px;
+	z-index: 1;	
+}
+
+
+
+.select {
+	background-color: #FFF;
+	border: solid 1px #FF0000;
+	padding: 3px;
+	border-radius: 3px;
+	min-width: 100%;
+	font-size: 120%;
+}
+.lbl-il-ilce {
+	font-size: 120%;
+	line-height: 28px;
+}
+#il-ilce-container {
+	position: relative;
+	text-align: center;
+	height: 50px;
+	margin-top: -10px;	
+	margin-bottom: 20px;
+}
+#il-ilce-container #il-ilce-border {
+	border: 2px solid #ececec;
+	margin: 0 auto;
+	padding: 7px;
+}
+
+
+#bulunan-adresler {
+	display: none;
+}
+#bulunan-adresler ul {
+	list-style-image: url('img/bullet.png')
+}
+#bulunan-adresler ul li:first-child {
+	border-top: solid 1px #ececec;
+}
+#bulunan-adresler ul li {
+	border-bottom: solid 1px #ececec;
+}
+#bulunan-adresler ul li span {	
+	font-weight: bold;
+	font-size: 110%;
+	line-height: 28px;
+}
+
+#detay-cerceve {
+	display: none;
+	position: relative;
+	height: 170px;
+	padding: 10px 15px 32px 15px;
+	background-image: url('img/harita-cerceve.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+#detay-cerceve h2 {
+	margin-bottom: 0px;
+}
+#detay-cerceve p {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #333;
+    padding-top: 10px;	
+}
+
+
+
+#harita-cerceve {
+	position: relative;
+	height: 285px;
+	padding: 10px 15px 32px 15px;
+	background-image: url('img/harita-cerceve.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+#harita-cerceve #harita-tasiyici {
+	width: 100%;
+	height: 100%;
+}
+#harita-cerceve #harita-tasiyici #map {
+	display: block;
+	background-color: #A9A9A9;
+	height: 100%;
+	width: 100%;
+}
+#harita-cerceve #harita-tasiyici #map #aGFyaXRh {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+
+#aydem {
+	position: relative;
+	background-image: url('img/aydem.png');
+	background-size: 100% 100%;
+	height: 42px;
+}
+
+
+
+}
+
+@media only screen and (min-width: 350px) {
+	body {
+		width: 350px;
+		margin: 0 auto;
+	}
+}
