@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<base href="https://googlemapspanel.herokuapp.com/">
+<base href="http://localhost/GoogleMapsPanel/">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#e31d1a">
@@ -194,11 +194,13 @@ $(function(){
 			var location = $.map(locations, function(e, i){
 				if(e.id == id) return e;
 			});
-			showCustomInfo(location[0].baslik, location[0].adres, location[0].telefon, location[0].web);
-			map.setCenter({
-				lat: parseFloat(location[0].lat),
-				lng: parseFloat(location[0].lng)
-			});						
+			if(location.length > 0){
+				showCustomInfo(location[0].baslik, location[0].adres, location[0].telefon, location[0].web);
+				map.setCenter({
+					lat: parseFloat(location[0].lat),
+					lng: parseFloat(location[0].lng)
+				});					
+			}
 		}			
 	});	
 });
