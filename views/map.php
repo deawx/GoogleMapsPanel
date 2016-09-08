@@ -96,6 +96,11 @@
 <script>
 var map;
 
+var $default_location = {
+	lat: 38.43019407828687,
+	lng: 27.143611907958984
+};
+
 var locations = [
     ['Bondi Beach', -33.890542, 151.274856, 4],
     ['Coogee Beach', -33.923036, 151.259052, 5],
@@ -105,14 +110,11 @@ var locations = [
 ];
 
 function initMap() {
-    map = new google.maps.Map($('#map')[0], {
-        zoom: 12,
-        center: {
-			lat: 38.43019407828687,
-			lng: 27.143611907958984
-        }
-    });
-    setMarkers(map);
+    map = new google.maps.Map($('#map')[0], {        
+        center: $default_location,
+		zoom: 12
+    });    
+	setMarkers(map);
 }
 
 function initApp() {
@@ -120,7 +122,7 @@ function initApp() {
         $.post('admin/lokasyon/liste', {}, function(response) {
             locations = response;
             initMap();
-        });
+        });		
     });
 }
 
@@ -128,12 +130,12 @@ function setMarkers(map) {
     var marker, i;
     for (i = 0; i < locations.length; i++) {
         var location = locations[i];
-        if (i == 0) {
+        /*if (i == 0) {
             map.setCenter({
                 lat: parseFloat(location.lat),
                 lng: parseFloat(location.lng)
             });
-        }
+        }*/		
         marker = new google.maps.Marker({
             position: {
                 lat: parseFloat(location.lat),
@@ -150,7 +152,17 @@ function setMarkers(map) {
             }
         })(marker, i));
     }
-
+	if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {				
+			$default_location = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+			map.setCenter($default_location);				
+		}, function(){ },
+		{
+			enableHighAccuracy: false,
+			timeout: 30000,
+			maximumAge: 0
+		});
+	}
 }
 
 function showCustomInfo(baslik, adres, telefon, web){
