@@ -185,6 +185,7 @@ function placesServiceCallback(results) {
 	}
 }
 $(function(){
+	/*
 	$('#il').on('change', function() {
 		var _lat = $(this).data('lat');
 		var _lng = $(this).data('lng');
@@ -195,6 +196,7 @@ $(function(){
 			});	
 		}
 	});
+	*/
 	$('#ilce').on('change', function() {
 		if(this.value > 0){
 			$.post('admin/lokasyon/liste/'+this.value, {}, function(response) {
